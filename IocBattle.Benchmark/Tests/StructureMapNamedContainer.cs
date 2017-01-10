@@ -8,7 +8,7 @@ namespace IocBattle.Benchmark.Tests
 {
     public class StructureMapNamedContainerTest : IContainer
     {
-        private readonly Container container = new Container();
+        private Container container;
         public string Name
         {
             get { return "StructureMap Named"; }
@@ -22,7 +22,7 @@ namespace IocBattle.Benchmark.Tests
 
         public void SetupForTransientTest()
         {
-            container.Dispose();
+            container = new Container();
 
             container.Configure(x =>
             {
@@ -47,7 +47,7 @@ namespace IocBattle.Benchmark.Tests
 
         public void SetupForSingletonTest()
         {
-            container.Dispose();
+            container = new Container();
 
             container.Configure(x =>
             {
