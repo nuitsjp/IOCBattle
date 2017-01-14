@@ -11,14 +11,14 @@ namespace IocBattle.Benchmark
             {
                 new NewContainer(),
                 new DryIocContainer(), 
-                new DynamoAutoContainer(),
+                //new DynamoAutoContainer(),
                 new AutoFacLambdaContainer(),
                 new AutoFacContainer(),
                 new StructureMapContainer(),
                 new SimpleInjectorContainer(),
                 new UnityContainer(),
-                new NinjectContainer(),
-                new WindsorContainer(),
+                //new NinjectContainer(),
+                //new WindsorContainer(),
             };
 
             foreach (var container in containers)
